@@ -1,141 +1,118 @@
-// SwipeHired application URL
 const APP_URL =
   "https://swipehired-675501162477.asia-south1.run.app";
 
 
-// ========================================
-// LOGIN / SIGNUP REDIRECT
-// ========================================
+// ==========================================
+// BUTTON REDIRECTS
+// ==========================================
 
-document.querySelectorAll("[data-auth]").forEach((button) => {
-
+document.querySelectorAll(".login-btn").forEach((button) => {
   button.addEventListener("click", () => {
-
-    // Both login and signup currently redirect
-    // to the SwipeHired application.
-
     window.location.href = APP_URL;
-
   });
-
 });
 
 
-// ========================================
-// MOBILE MENU
-// ========================================
-
-const mobileMenuBtn =
-  document.getElementById("mobileMenuBtn");
-
-const mobileMenu =
-  document.getElementById("mobileMenu");
-
-
-if (mobileMenuBtn && mobileMenu) {
-
-  mobileMenuBtn.addEventListener("click", () => {
-
-    mobileMenu.classList.toggle("active");
-
+document.querySelectorAll(".signup-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    window.location.href = APP_URL;
   });
+});
 
 
-  // Close mobile menu after clicking a link
+document.querySelectorAll(".candidate-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    window.location.href = APP_URL;
+  });
+});
 
-  mobileMenu.querySelectorAll("a").forEach((link) => {
 
-    link.addEventListener("click", () => {
+document.querySelectorAll(".recruiter-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    window.location.href = APP_URL;
+  });
+});
 
-      mobileMenu.classList.remove("active");
+
+// ==========================================
+// FAQ ACCORDION
+// ==========================================
+
+const faqQuestions = document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach((question) => {
+
+  question.addEventListener("click", () => {
+
+    const currentItem = question.parentElement;
+
+    document.querySelectorAll(".faq-item").forEach((item) => {
+
+      if (item !== currentItem) {
+        item.classList.remove("active");
+      }
 
     });
 
+    currentItem.classList.toggle("active");
+
+  });
+
+});
+
+
+// ==========================================
+// MOBILE MENU
+// ==========================================
+
+const mobileButton = document.querySelector(".mobile-menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+if (mobileButton) {
+
+  mobileButton.addEventListener("click", () => {
+
+    if (navLinks.style.display === "flex") {
+
+      navLinks.style.display = "none";
+
+    } else {
+
+      navLinks.style.display = "flex";
+
+      navLinks.style.position = "absolute";
+      navLinks.style.top = "76px";
+      navLinks.style.left = "0";
+      navLinks.style.right = "0";
+
+      navLinks.style.flexDirection = "column";
+      navLinks.style.padding = "20px";
+
+      navLinks.style.background = "white";
+      navLinks.style.borderBottom = "1px solid #e7e7eb";
+
+      navLinks.style.margin = "0";
+      navLinks.style.gap = "18px";
+
+    }
+
   });
 
 }
 
 
-// ========================================
-// CLOSE MOBILE MENU WHEN CLICKING OUTSIDE
-// ========================================
+// ==========================================
+// CLOSE MOBILE MENU AFTER CLICK
+// ==========================================
 
-document.addEventListener("click", (event) => {
+document.querySelectorAll(".nav-links a").forEach((link) => {
 
-  if (!mobileMenu || !mobileMenuBtn) {
-    return;
-  }
+  link.addEventListener("click", () => {
 
-  const clickedInsideMenu =
-    mobileMenu.contains(event.target);
-
-  const clickedButton =
-    mobileMenuBtn.contains(event.target);
-
-  if (!clickedInsideMenu && !clickedButton) {
-
-    mobileMenu.classList.remove("active");
-
-  }
-
-});
-
-
-// ========================================
-// SIMPLE SCROLL REVEAL
-// ========================================
-
-const revealElements = document.querySelectorAll(
-  ".problem-card, .step, .recommendation, .feature, .candidate-row"
-);
-
-
-const revealObserver =
-  new IntersectionObserver(
-    (entries) => {
-
-      entries.forEach((entry) => {
-
-        if (entry.isIntersecting) {
-
-          entry.target.style.opacity = "1";
-          entry.target.style.transform = "translateY(0)";
-
-          revealObserver.unobserve(entry.target);
-
-        }
-
-      });
-
-    },
-    {
-      threshold: 0.1
+    if (window.innerWidth <= 900) {
+      navLinks.style.display = "none";
     }
-  );
 
-
-revealElements.forEach((element) => {
-
-  element.style.opacity = "0";
-  element.style.transform = "translateY(20px)";
-  element.style.transition =
-    "opacity 0.6s ease, transform 0.6s ease";
-
-  revealObserver.observe(element);
+  });
 
 });
-
-
-// ========================================
-// CURRENT YEAR
-// ========================================
-
-const yearElement =
-  document.querySelector(".footer-bottom span");
-
-if (yearElement) {
-
-  yearElement.textContent =
-    `© ${new Date().getFullYear()} SwipeHired. All rights reserved.`;
-
-}
