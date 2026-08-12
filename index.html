@@ -4,10 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>SwipeHired — AI-Powered Hiring</title>
+  <title>SwipeHired — AI-Powered Job Matching</title>
   <meta
     name="description"
-    content="SwipeHired makes hiring faster with AI-powered job discovery, candidate matching and recruiter workflows."
+    content="SwipeHired uses AI to match job seekers with relevant opportunities and helps recruiters discover qualified candidates faster."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
   />
 
   <link rel="stylesheet" href="styles.css" />
@@ -17,37 +24,29 @@
 
   <!-- NAVBAR -->
   <header class="navbar">
-    <div class="container nav-inner">
+    <div class="nav-container">
 
-      <a href="#" class="logo">
-        <span class="logo-icon">S</span>
-        <span>Swipe<span>Hired</span></span>
+      <a href="#home" class="logo">
+        <span class="logo-mark">S</span>
+        <span>Swipe<span class="logo-accent">Hired</span></span>
       </a>
 
       <nav class="nav-links">
-        <a href="#how-it-works">How it works</a>
+        <a href="#how-it-works">How It Works</a>
         <a href="#candidates">For Candidates</a>
         <a href="#recruiters">For Recruiters</a>
-        <a href="#about">About</a>
+        <a href="#traction">Traction</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="btn btn-outline" data-auth="login">Log in</button>
-        <button class="btn btn-primary" data-auth="signup">Get Started</button>
+        <button class="btn btn-ghost login-btn">Log In</button>
+        <button class="btn btn-primary signup-btn">Get Started</button>
       </div>
 
-      <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <button class="mobile-menu-btn" aria-label="Open menu">
         ☰
       </button>
 
-    </div>
-
-    <div class="mobile-menu" id="mobileMenu">
-      <a href="#how-it-works">How it works</a>
-      <a href="#candidates">For Candidates</a>
-      <a href="#recruiters">For Recruiters</a>
-      <a href="#about">About</a>
-      <button class="btn btn-primary" data-auth="signup">Get Started</button>
     </div>
   </header>
 
@@ -55,226 +54,223 @@
   <!-- HERO -->
   <main>
 
-    <section class="hero">
-      <div class="hero-glow glow-one"></div>
-      <div class="hero-glow glow-two"></div>
+    <section class="hero" id="home">
 
-      <div class="container hero-grid">
+      <div class="hero-content">
 
-        <div class="hero-content">
-
-          <div class="badge">
-            <span class="badge-dot"></span>
-            AI-powered hiring platform
-          </div>
-
-          <h1>
-            Your next opportunity
-            <span>is one swipe away.</span>
-          </h1>
-
-          <p class="hero-description">
-            SwipeHired uses AI to match candidates with relevant jobs and
-            helps recruiters discover the right talent faster.
-          </p>
-
-          <div class="hero-buttons">
-            <button class="btn btn-primary btn-large" data-auth="signup">
-              Start Hiring Smarter
-              <span>→</span>
-            </button>
-
-            <a href="#how-it-works" class="btn btn-secondary btn-large">
-              See How It Works
-            </a>
-          </div>
-
-          <div class="hero-trust">
-            <div class="avatars">
-              <span>R</span>
-              <span>A</span>
-              <span>S</span>
-              <span>+</span>
-            </div>
-
-            <div>
-              <strong>100+ job seekers</strong>
-              <p>already exploring SwipeHired</p>
-            </div>
-          </div>
-
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          AI-powered hiring for the next generation
         </div>
 
+        <h1>
+          Stop Searching.
+          <span>Start Matching.</span>
+        </h1>
 
-        <!-- APP MOCKUP -->
-        <div class="hero-visual">
+        <p class="hero-description">
+          SwipeHired uses AI to match job seekers with relevant opportunities
+          and helps recruiters discover qualified candidates faster.
+        </p>
 
-          <div class="phone">
+        <div class="hero-buttons">
+          <button class="btn btn-primary btn-large candidate-btn">
+            Find Your Next Job
+            <span>→</span>
+          </button>
 
-            <div class="phone-top">
-              <span>9:41</span>
-              <div class="phone-icons">
-                ● ●
-              </div>
-            </div>
+          <button class="btn btn-outline btn-large recruiter-btn">
+            Hire Smarter
+            <span>→</span>
+          </button>
+        </div>
 
-            <div class="app-header">
-              <div class="mini-logo">S</div>
-              <strong>SwipeHired</strong>
+        <div class="hero-trust">
+          <div class="trust-item">
+            <strong>100+</strong>
+            <span>Job Seekers</span>
+          </div>
 
-              <div class="notification">3</div>
-            </div>
+          <div class="trust-divider"></div>
 
-            <div class="match-label">
-              <span>✨ AI MATCHES</span>
-              <small>See all</small>
-            </div>
+          <div class="trust-item">
+            <strong>5+</strong>
+            <span>HRs & Recruiters</span>
+          </div>
 
-            <div class="job-card">
+          <div class="trust-divider"></div>
 
-              <div class="company-logo">
-                A
-              </div>
+          <div class="trust-item">
+            <strong>Early</strong>
+            <span>Stage Startup</span>
+          </div>
+        </div>
 
-              <div class="job-company">
-                <strong>Acme Technologies</strong>
-                <span>Technology</span>
-              </div>
+      </div>
 
-              <div class="match-score">
-                <strong>94%</strong>
-                <span>Match</span>
-              </div>
 
-              <div class="job-info">
-                <h3>Software Engineer</h3>
+      <!-- PRODUCT PREVIEW -->
+      <div class="hero-product">
 
-                <p>
-                  Pune · Full-time
-                </p>
+        <div class="floating-card match-card">
+          <div class="match-icon">✓</div>
+          <div>
+            <small>AI Match</small>
+            <strong>92% Match</strong>
+          </div>
+        </div>
 
-                <p>
-                  ₹8L – ₹14L / year
-                </p>
-              </div>
+        <div class="phone">
 
-              <div class="skills">
-                <span>React</span>
-                <span>Node.js</span>
+          <div class="phone-top">
+            <span>9:41</span>
+            <span>● ● ●</span>
+          </div>
+
+          <div class="phone-header">
+            <strong>Discover Jobs</strong>
+            <span>♡</span>
+          </div>
+
+          <div class="job-card">
+
+            <div class="company-logo">T</div>
+
+            <div class="job-content">
+              <span class="match-badge">92% MATCH</span>
+
+              <h3>Software Engineer</h3>
+              <p>Technology Company</p>
+
+              <div class="job-tags">
                 <span>Python</span>
+                <span>React</span>
+                <span>Remote</span>
               </div>
 
-              <div class="match-reason">
-                <span>✦</span>
-                Great match for your skills
+              <div class="job-footer">
+                <span>₹8–12 LPA</span>
+                <span>Full-time</span>
               </div>
-
-            </div>
-
-            <div class="swipe-actions">
-              <button class="reject">×</button>
-              <button class="super">★</button>
-              <button class="like">♥</button>
             </div>
 
           </div>
 
-          <div class="floating-card match-card">
-            <span class="floating-icon">✓</span>
-            <div>
-              <strong>94% Match</strong>
-              <p>AI-powered matching</p>
-            </div>
-          </div>
-
-          <div class="floating-card applied-card">
-            <span class="floating-icon">⚡</span>
-            <div>
-              <strong>Applied!</strong>
-              <p>Application sent</p>
-            </div>
+          <div class="swipe-actions">
+            <button class="swipe-no">×</button>
+            <button class="swipe-yes">♥</button>
           </div>
 
         </div>
 
       </div>
-    </section>
 
-
-    <!-- STATS -->
-    <section class="stats">
-      <div class="container stats-grid">
-
-        <div class="stat">
-          <strong>100+</strong>
-          <span>Job Seekers</span>
-        </div>
-
-        <div class="stat">
-          <strong>5+</strong>
-          <span>HRs & Recruiters</span>
-        </div>
-
-        <div class="stat">
-          <strong>AI</strong>
-          <span>Powered Matching</span>
-        </div>
-
-        <div class="stat">
-          <strong>1</strong>
-          <span>Smarter Hiring Experience</span>
-        </div>
-
-      </div>
     </section>
 
 
     <!-- PROBLEM -->
-    <section class="section problem" id="about">
+    <section class="section problem-section">
 
-      <div class="container">
+      <div class="section-heading center">
+        <span class="section-label">THE PROBLEM</span>
 
-        <div class="section-heading">
-          <div class="eyebrow">THE PROBLEM</div>
+        <h2>
+          Hiring shouldn't feel like
+          <span>searching through a haystack.</span>
+        </h2>
 
-          <h2>
-            Hiring shouldn't feel like
-            <span>searching through a haystack.</span>
-          </h2>
+        <p>
+          Job seekers apply to countless jobs. Recruiters screen hundreds of
+          resumes. Both sides waste time looking for the right match.
+        </p>
+      </div>
 
+      <div class="problem-grid">
+
+        <div class="problem-card">
+          <div class="problem-number">01</div>
+          <h3>For Job Seekers</h3>
           <p>
-            Traditional job portals create too much noise for candidates
-            and too much work for recruiters.
+            Endless job searches, repetitive applications and opportunities
+            that don't match their skills or preferences.
           </p>
         </div>
 
-        <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-number">02</div>
+          <h3>For Recruiters</h3>
+          <p>
+            Hundreds of resumes to review, manual screening and difficulty
+            finding candidates who actually fit the role.
+          </p>
+        </div>
 
-          <div class="problem-card">
-            <div class="problem-icon">⌕</div>
-            <h3>Endless job searching</h3>
-            <p>
-              Candidates spend hours scrolling through jobs that aren't
-              relevant to their skills or goals.
-            </p>
+      </div>
+
+    </section>
+
+
+    <!-- DIFFERENCE -->
+    <section class="section difference-section" id="how-it-works">
+
+      <div class="section-heading center">
+
+        <span class="section-label">THE SWIPEHIRED DIFFERENCE</span>
+
+        <h2>
+          <span>Match first.</span>
+          Apply second.
+        </h2>
+
+        <p>
+          Instead of making candidates search endlessly, SwipeHired puts
+          relevant opportunities in front of them using AI-powered matching.
+        </p>
+
+      </div>
+
+      <div class="comparison">
+
+        <div class="comparison-side traditional">
+
+          <div class="comparison-title">
+            <span class="comparison-icon">×</span>
+            Traditional Job Search
           </div>
 
-          <div class="problem-card">
-            <div class="problem-icon">◉</div>
-            <h3>Too many applications</h3>
-            <p>
-              Recruiters receive hundreds of applications and struggle
-              to identify the right candidates quickly.
-            </p>
+          <div class="flow">
+            <div>Search hundreds of jobs</div>
+            <span>↓</span>
+            <div>Read job descriptions</div>
+            <span>↓</span>
+            <div>Apply repeatedly</div>
+            <span>↓</span>
+            <div>Wait for response</div>
           </div>
 
-          <div class="problem-card">
-            <div class="problem-icon">⚙</div>
-            <h3>Manual screening</h3>
-            <p>
-              Resume screening and candidate evaluation consume valuable
-              recruiter time.
-            </p>
+        </div>
+
+
+        <div class="comparison-center">
+          <span>VS</span>
+        </div>
+
+
+        <div class="comparison-side swipe">
+
+          <div class="comparison-title">
+            <span class="comparison-icon check">✓</span>
+            SwipeHired
+          </div>
+
+          <div class="flow">
+            <div>Create your profile</div>
+            <span>↓</span>
+            <div>AI understands your fit</div>
+            <span>↓</span>
+            <div>Discover relevant jobs</div>
+            <span>↓</span>
+            <div><strong>Swipe → Apply</strong></div>
           </div>
 
         </div>
@@ -285,68 +281,146 @@
 
 
     <!-- HOW IT WORKS -->
-    <section class="section how-it-works" id="how-it-works">
+    <section class="section how-section">
 
-      <div class="container">
+      <div class="section-heading center">
 
-        <div class="section-heading center">
+        <span class="section-label">HOW IT WORKS</span>
 
-          <div class="eyebrow">HOW IT WORKS</div>
+        <h2>
+          From profile to
+          <span>opportunity.</span>
+        </h2>
 
-          <h2>
-            Hiring,
-            <span>reimagined.</span>
-          </h2>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">01</div>
+
+          <div class="step-icon">👤</div>
+
+          <h3>Create Your Profile</h3>
 
           <p>
-            SwipeHired connects candidates and recruiters using AI-powered
-            matching instead of endless searching.
+            Add your resume, skills, experience, preferences and career goals.
           </p>
 
         </div>
 
 
-        <div class="steps">
+        <div class="step-line"></div>
 
-          <div class="step">
-            <div class="step-number">01</div>
 
-            <div class="step-content">
-              <div class="step-icon">📄</div>
-              <h3>Build your profile</h3>
-              <p>
-                Upload your resume and let AI understand your skills,
-                experience and preferences.
-              </p>
+        <div class="step">
+
+          <div class="step-number">02</div>
+
+          <div class="step-icon">🤖</div>
+
+          <h3>AI Finds Your Match</h3>
+
+          <p>
+            SwipeHired analyzes your profile against job requirements to
+            identify relevant opportunities.
+          </p>
+
+        </div>
+
+
+        <div class="step-line"></div>
+
+
+        <div class="step">
+
+          <div class="step-number">03</div>
+
+          <div class="step-icon">⚡</div>
+
+          <h3>Swipe & Apply</h3>
+
+          <p>
+            Discover relevant jobs and apply to the opportunities that
+            interest you.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- AI MATCHING -->
+    <section class="section ai-section">
+
+      <div class="ai-grid">
+
+        <div class="ai-copy">
+
+          <span class="section-label">AI MATCHING ENGINE</span>
+
+          <h2>
+            More than keywords.
+            <span>Real matching.</span>
+          </h2>
+
+          <p>
+            SwipeHired is designed to understand both sides of the hiring
+            equation — what a candidate brings and what a company needs.
+          </p>
+
+          <div class="ai-list">
+
+            <div>
+              <span>✓</span>
+              <strong>Skills matching</strong>
             </div>
+
+            <div>
+              <span>✓</span>
+              <strong>Experience matching</strong>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <strong>Role & job requirement matching</strong>
+            </div>
+
+            <div>
+              <span>✓</span>
+              <strong>Location & preferences</strong>
+            </div>
+
           </div>
 
+        </div>
 
-          <div class="step">
-            <div class="step-number">02</div>
 
-            <div class="step-content">
-              <div class="step-icon">✨</div>
-              <h3>Get AI-matched jobs</h3>
-              <p>
-                Swipe through opportunities ranked according to your
-                profile and career preferences.
-              </p>
-            </div>
+        <div class="ai-visual">
+
+          <div class="data-card resume-data">
+            <small>CANDIDATE</small>
+            <strong>Software Engineer</strong>
+            <span>Python • React • AI</span>
           </div>
 
+          <div class="ai-arrow">↓</div>
 
-          <div class="step">
-            <div class="step-number">03</div>
+          <div class="ai-engine">
+            <div class="ai-orbit">✦</div>
+            <strong>SwipeHired AI</strong>
+            <span>Analyzing compatibility...</span>
+          </div>
 
-            <div class="step-content">
-              <div class="step-icon">🚀</div>
-              <h3>Apply instantly</h3>
-              <p>
-                Swipe right on the opportunities you want and apply
-                without unnecessary friction.
-              </p>
-            </div>
+          <div class="ai-arrow">↓</div>
+
+          <div class="data-card match-result">
+            <small>MATCH SCORE</small>
+            <strong>92% Match</strong>
+            <span>Strong fit for this role</span>
           </div>
 
         </div>
@@ -357,136 +431,86 @@
 
 
     <!-- CANDIDATES -->
-    <section class="section candidate-section" id="candidates">
+    <section class="section audience-section" id="candidates">
 
-      <div class="container split-grid">
+      <div class="audience-grid">
 
-        <div class="split-content">
+        <div class="audience-visual candidate-visual">
 
-          <div class="eyebrow">FOR CANDIDATES</div>
+          <div class="mock-dashboard">
 
-          <h2>
-            Stop searching.
-            <span>Start matching.</span>
-          </h2>
-
-          <p>
-            SwipeHired brings relevant opportunities directly to you.
-            Let AI understand your profile and surface jobs that actually
-            fit your skills and preferences.
-          </p>
-
-          <div class="feature-list">
-
-            <div class="feature">
-              <span>✓</span>
-              <div>
-                <strong>AI-powered job recommendations</strong>
-                <p>Discover jobs based on your actual profile.</p>
-              </div>
+            <div class="mock-top">
+              <span>SwipeHired</span>
+              <span>●</span>
             </div>
 
-            <div class="feature">
-              <span>✓</span>
-              <div>
-                <strong>Instant matching</strong>
-                <p>See how well you match before applying.</p>
-              </div>
-            </div>
+            <div class="mock-job">
+              <span class="match-badge">88% MATCH</span>
+              <h3>Product Designer</h3>
+              <p>Startup • Pune</p>
 
-            <div class="feature">
-              <span>✓</span>
-              <div>
-                <strong>Simple swipe experience</strong>
-                <p>Say yes or no without endless job searching.</p>
+              <div class="mock-tags">
+                <span>Figma</span>
+                <span>UX</span>
+                <span>Product</span>
+              </div>
+
+              <div class="mock-buttons">
+                <button>×</button>
+                <button>♥</button>
               </div>
             </div>
 
           </div>
-
-          <button class="btn btn-primary" data-auth="signup">
-            Find Your Next Job →
-          </button>
 
         </div>
 
 
-        <div class="candidate-dashboard">
+        <div class="audience-copy">
 
-          <div class="dashboard-header">
-            <div>
-              <span>YOUR MATCHES</span>
-              <h3>Recommended for you</h3>
-            </div>
+          <span class="section-label">FOR JOB SEEKERS</span>
 
-            <span class="online-dot"></span>
-          </div>
+          <h2>
+            Your next job shouldn't
+            <span>take 100 applications.</span>
+          </h2>
 
-          <div class="recommendation">
+          <p>
+            SwipeHired helps candidates discover opportunities that better
+            match their skills, experience and preferences.
+          </p>
 
-            <div class="rec-logo">A</div>
+          <ul class="feature-list">
 
-            <div class="rec-main">
-              <strong>Frontend Developer</strong>
-              <span>Acme Technologies</span>
-
-              <div class="rec-tags">
-                <span>React</span>
-                <span>TypeScript</span>
-                <span>Remote</span>
+            <li>
+              <span>✓</span>
+              <div>
+                <strong>AI-powered job matching</strong>
+                <p>See opportunities relevant to your profile.</p>
               </div>
-            </div>
+            </li>
 
-            <div class="rec-score">
-              <strong>94%</strong>
-              <span>match</span>
-            </div>
-
-          </div>
-
-
-          <div class="recommendation">
-
-            <div class="rec-logo second">T</div>
-
-            <div class="rec-main">
-              <strong>Full Stack Engineer</strong>
-              <span>TechNova</span>
-
-              <div class="rec-tags">
-                <span>Node.js</span>
-                <span>Python</span>
+            <li>
+              <span>✓</span>
+              <div>
+                <strong>Swipe-based discovery</strong>
+                <p>Quickly decide which opportunities interest you.</p>
               </div>
-            </div>
+            </li>
 
-            <div class="rec-score">
-              <strong>89%</strong>
-              <span>match</span>
-            </div>
-
-          </div>
-
-
-          <div class="recommendation">
-
-            <div class="rec-logo third">F</div>
-
-            <div class="rec-main">
-              <strong>Software Developer</strong>
-              <span>FutureLabs</span>
-
-              <div class="rec-tags">
-                <span>Java</span>
-                <span>AWS</span>
+            <li>
+              <span>✓</span>
+              <div>
+                <strong>Less searching, more applying</strong>
+                <p>Spend your time on jobs worth pursuing.</p>
               </div>
-            </div>
+            </li>
 
-            <div class="rec-score">
-              <strong>83%</strong>
-              <span>match</span>
-            </div>
+          </ul>
 
-          </div>
+          <button class="btn btn-primary candidate-btn">
+            Find Your Next Job →
+          </button>
 
         </div>
 
@@ -496,227 +520,118 @@
 
 
     <!-- RECRUITERS -->
-    <section class="section recruiter-section" id="recruiters">
+    <section class="section audience-section recruiter-section" id="recruiters">
 
-      <div class="container split-grid reverse">
+      <div class="audience-grid reverse">
 
-        <div class="recruiter-dashboard">
+        <div class="audience-copy">
 
-          <div class="dashboard-top">
-
-            <div>
-              <span>RECRUITER DASHBOARD</span>
-              <h3>AI Candidate Matching</h3>
-            </div>
-
-            <button class="mini-btn">+ Create Job</button>
-
-          </div>
-
-
-          <div class="dashboard-stat-grid">
-
-            <div>
-              <span>Total applicants</span>
-              <strong>248</strong>
-            </div>
-
-            <div>
-              <span>AI shortlisted</span>
-              <strong>32</strong>
-            </div>
-
-            <div>
-              <span>Interviews</span>
-              <strong>12</strong>
-            </div>
-
-          </div>
-
-
-          <div class="candidate-row">
-
-            <div class="candidate-avatar">A</div>
-
-            <div class="candidate-info">
-              <strong>Alex Johnson</strong>
-              <span>Software Engineer · 3 yrs</span>
-            </div>
-
-            <div class="candidate-match">
-              <strong>96%</strong>
-              <span>Match</span>
-            </div>
-
-            <button class="view-btn">View</button>
-
-          </div>
-
-
-          <div class="candidate-row">
-
-            <div class="candidate-avatar blue">R</div>
-
-            <div class="candidate-info">
-              <strong>Riya Sharma</strong>
-              <span>Frontend Engineer · 2 yrs</span>
-            </div>
-
-            <div class="candidate-match">
-              <strong>93%</strong>
-              <span>Match</span>
-            </div>
-
-            <button class="view-btn">View</button>
-
-          </div>
-
-
-          <div class="candidate-row">
-
-            <div class="candidate-avatar green">M</div>
-
-            <div class="candidate-info">
-              <strong>Michael Lee</strong>
-              <span>Full Stack Developer · 4 yrs</span>
-            </div>
-
-            <div class="candidate-match">
-              <strong>89%</strong>
-              <span>Match</span>
-            </div>
-
-            <button class="view-btn">View</button>
-
-          </div>
-
-        </div>
-
-
-        <div class="split-content">
-
-          <div class="eyebrow">FOR RECRUITERS</div>
+          <span class="section-label">FOR RECRUITERS</span>
 
           <h2>
-            Find the right talent
-            <span>without the noise.</span>
+            Stop screening.
+            <span>Start interviewing.</span>
           </h2>
 
           <p>
-            Stop manually searching through hundreds of resumes.
-            SwipeHired uses AI to understand your hiring requirements
-            and surface candidates who actually fit.
+            Give recruiters a faster way to discover candidates who are
+            relevant to their hiring requirements.
           </p>
 
-          <div class="feature-list">
+          <div class="recruiter-steps">
 
-            <div class="feature">
-              <span>✓</span>
+            <div>
+              <span>01</span>
               <div>
-                <strong>AI candidate matching</strong>
-                <p>Automatically rank candidates based on your requirements.</p>
+                <strong>Create a job</strong>
+                <p>Define skills, experience and hiring criteria.</p>
               </div>
             </div>
 
-            <div class="feature">
-              <span>✓</span>
+            <div>
+              <span>02</span>
               <div>
-                <strong>Smart candidate search</strong>
-                <p>Search using skills, experience and natural language.</p>
+                <strong>Set your match threshold</strong>
+                <p>Decide what level of candidate fit you want to see.</p>
               </div>
             </div>
 
-            <div class="feature">
-              <span>✓</span>
+            <div>
+              <span>03</span>
               <div>
-                <strong>Faster shortlisting</strong>
-                <p>Spend less time screening and more time interviewing.</p>
+                <strong>Review matched candidates</strong>
+                <p>Focus your time on the most relevant profiles.</p>
               </div>
             </div>
 
           </div>
 
-          <button class="btn btn-primary" data-auth="signup">
+          <button class="btn btn-primary recruiter-btn">
             Start Hiring →
           </button>
 
         </div>
 
-      </div>
 
-    </section>
+        <div class="audience-visual">
 
+          <div class="hr-dashboard">
 
-    <!-- AI SECTION -->
-    <section class="section ai-section">
+            <div class="dashboard-header">
+              <div>
+                <small>HIRING DASHBOARD</small>
+                <h3>Software Engineer</h3>
+              </div>
 
-      <div class="container ai-box">
-
-        <div class="ai-content">
-
-          <div class="eyebrow">THE AI ADVANTAGE</div>
-
-          <h2>
-            Matching people with
-            <span>opportunity.</span>
-          </h2>
-
-          <p>
-            SwipeHired analyzes resumes, job descriptions, skills,
-            experience and preferences to create smarter candidate-job
-            matches.
-          </p>
-
-          <div class="ai-points">
-
-            <div>
-              <strong>01</strong>
-              <span>Understand</span>
-              <p>AI understands candidate and job requirements.</p>
+              <span class="dashboard-status">Active</span>
             </div>
 
-            <div>
-              <strong>02</strong>
-              <span>Match</span>
-              <p>Compare skills, experience and preferences.</p>
+            <div class="dashboard-stats">
+
+              <div>
+                <strong>124</strong>
+                <span>Applicants</span>
+              </div>
+
+              <div>
+                <strong>32</strong>
+                <span>AI Shortlisted</span>
+              </div>
+
+              <div>
+                <strong>12</strong>
+                <span>Interviews</span>
+              </div>
+
             </div>
 
-            <div>
-              <strong>03</strong>
-              <span>Rank</span>
-              <p>Surface the strongest opportunities and candidates.</p>
+            <div class="candidate-row">
+              <div class="avatar">A</div>
+              <div>
+                <strong>Candidate A</strong>
+                <span>Python • AI • Backend</span>
+              </div>
+              <b>94%</b>
             </div>
 
-          </div>
+            <div class="candidate-row">
+              <div class="avatar">R</div>
+              <div>
+                <strong>Candidate B</strong>
+                <span>React • Node • AWS</span>
+              </div>
+              <b>89%</b>
+            </div>
 
-        </div>
+            <div class="candidate-row">
+              <div class="avatar">S</div>
+              <div>
+                <strong>Candidate C</strong>
+                <span>Java • Spring • SQL</span>
+              </div>
+              <b>84%</b>
+            </div>
 
-
-        <div class="ai-visual">
-
-          <div class="ai-node candidate-node">
-            <span>👤</span>
-            <strong>Candidate</strong>
-          </div>
-
-          <div class="ai-line line-one"></div>
-
-          <div class="ai-core">
-            <span>✦</span>
-            <strong>AI</strong>
-            <small>Matching Engine</small>
-          </div>
-
-          <div class="ai-line line-two"></div>
-
-          <div class="ai-node job-node">
-            <span>💼</span>
-            <strong>Job</strong>
-          </div>
-
-          <div class="score-bubble">
-            94%
-            <small>Match</small>
           </div>
 
         </div>
@@ -726,34 +641,145 @@
     </section>
 
 
-    <!-- CTA -->
-    <section class="cta">
+    <!-- TRACTION -->
+    <section class="section traction-section" id="traction">
 
-      <div class="cta-glow"></div>
+      <div class="section-heading center">
 
-      <div class="container cta-content">
-
-        <div class="eyebrow">THE FUTURE OF HIRING</div>
+        <span class="section-label">EARLY TRACTION</span>
 
         <h2>
-          Ready to make hiring
-          <span>smarter?</span>
+          We're building the network
+          <span>from the ground up.</span>
         </h2>
 
         <p>
-          Whether you're looking for your next opportunity or your next
-          great hire, SwipeHired is built to make the connection faster.
+          SwipeHired is currently onboarding early job seekers and hiring
+          partners.
         </p>
 
-        <div class="cta-buttons">
+      </div>
 
-          <button class="btn btn-white btn-large" data-auth="signup">
-            Get Started →
+      <div class="traction-grid">
+
+        <div class="traction-card">
+          <strong>100+</strong>
+          <span>Early Job Seekers</span>
+          <p>Users exploring the platform.</p>
+        </div>
+
+        <div class="traction-card">
+          <strong>5+</strong>
+          <span>HRs & Recruiters</span>
+          <p>Early hiring partners.</p>
+        </div>
+
+        <div class="traction-card">
+          <strong>1</strong>
+          <span>Growing Marketplace</span>
+          <p>Building both sides of hiring.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="section faq-section">
+
+      <div class="section-heading center">
+
+        <span class="section-label">FAQ</span>
+
+        <h2>
+          Questions?
+          <span>We've got answers.</span>
+        </h2>
+
+      </div>
+
+      <div class="faq-container">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is SwipeHired?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            SwipeHired is an AI-powered hiring platform designed to help job
+            seekers discover relevant opportunities and help recruiters find
+            suitable candidates faster.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How does the matching work?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            SwipeHired analyzes candidate profiles and job requirements to
+            identify potential matches based on skills, experience and other
+            relevant preferences.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is SwipeHired for freshers?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. SwipeHired is focused on students, freshers and early-career
+            professionals while also serving recruiters hiring for these
+            candidates.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can recruiters use SwipeHired?
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. Recruiters can use SwipeHired to create hiring requirements
+            and discover candidates that match their criteria.
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+
+      <div class="final-cta-content">
+
+        <span class="section-label">READY?</span>
+
+        <h2>
+          Your next opportunity —
+          <br />
+          or your next hire —
+          <span>starts with a match.</span>
+        </h2>
+
+        <p>
+          Join the early SwipeHired network.
+        </p>
+
+        <div class="final-buttons">
+
+          <button class="btn btn-white candidate-btn">
+            Find Your Next Job →
           </button>
 
-          <a href="#how-it-works" class="btn btn-ghost btn-large">
-            Learn More
-          </a>
+          <button class="btn btn-transparent recruiter-btn">
+            Hire Talent →
+          </button>
 
         </div>
 
@@ -765,52 +791,46 @@
 
 
   <!-- FOOTER -->
-  <footer>
+  <footer class="footer">
 
-    <div class="container footer-grid">
+    <div class="footer-container">
 
       <div class="footer-brand">
 
-        <a href="#" class="logo">
-          <span class="logo-icon">S</span>
-          <span>Swipe<span>Hired</span></span>
+        <a href="#home" class="logo footer-logo">
+          <span class="logo-mark">S</span>
+          <span>Swipe<span class="logo-accent">Hired</span></span>
         </a>
 
         <p>
-          AI-powered hiring for the next generation.
+          AI-powered job matching for the next generation of hiring.
         </p>
 
       </div>
 
-      <div class="footer-column">
-        <h4>Product</h4>
-        <a href="#candidates">For Candidates</a>
-        <a href="#recruiters">For Recruiters</a>
-        <a href="#how-it-works">How it works</a>
-      </div>
+      <div class="footer-links">
 
-      <div class="footer-column">
-        <h4>Company</h4>
-        <a href="#about">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Careers</a>
-      </div>
+        <div>
+          <strong>Product</strong>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#candidates">For Candidates</a>
+          <a href="#recruiters">For Recruiters</a>
+        </div>
 
-      <div class="footer-column">
-        <h4>Get Started</h4>
-        <button class="footer-login" data-auth="login">Log in</button>
-        <button class="footer-login" data-auth="signup">Sign up</button>
+        <div>
+          <strong>Company</strong>
+          <a href="#traction">Traction</a>
+          <a href="#home">About</a>
+          <a href="#home">Contact</a>
+        </div>
+
       </div>
 
     </div>
 
-    <div class="container footer-bottom">
+    <div class="footer-bottom">
       <span>© 2026 SwipeHired. All rights reserved.</span>
-
-      <div>
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
+      <span>Built for the future of hiring.</span>
     </div>
 
   </footer>
